@@ -1,0 +1,31 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Viewproject.aspx.cs" Inherits="Viewproject" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+    </div>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+        DataKeyNames="project_num" DataSourceID="LinqDataSource1">
+        <Columns>
+            <asp:BoundField DataField="project_num" HeaderText="project_num" 
+                ReadOnly="True" SortExpression="project_num" />
+            <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
+            <asp:BoundField DataField="type" HeaderText="type" SortExpression="type" />
+            <asp:BoundField DataField="detail" HeaderText="detail" 
+                SortExpression="detail" />
+            <asp:BoundField DataField="major" HeaderText="major" SortExpression="major" />
+        </Columns>
+    </asp:GridView>
+    <asp:LinqDataSource ID="LinqDataSource1" runat="server" 
+        ContextTypeName="DataClassesDataContext" EntityTypeName="" TableName="project">
+    </asp:LinqDataSource>
+    </form>
+</body>
+</html>

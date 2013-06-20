@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DatabaseConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.project" Member="project">
+    <Type Name="project">
+      <Column Name="project_num" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="detail" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="major" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.teacher" Member="teacher">
+    <Type Name="teacher">
+      <Column Name="teacher_name" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="telephone" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[user]" Member="user">
+    <Type Name="user">
+      <Column Name="user_name" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="major" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="class" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="[level]" Member="level" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="telephone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.admin" Member="admin">
+    <Type Name="admin">
+      <Column Name="admin_name" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.proposal" Member="proposal">
+    <Type Name="proposal">
+      <Column Name="user_name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="teacher_name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="proposal_num" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="proposal" Member="proposal1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="project_num" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
